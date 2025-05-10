@@ -1,0 +1,28 @@
+{
+  "name": "election-system",
+  "version": "1.0.0",
+  "description": "Blockchain-based election system with Django, React, and Hardhat",
+  "main": "dev.js",
+  "scripts": {
+    "dev": "node dev.js",
+    "backend": "cd backend && python manage.py runserver",
+    "frontend": "cd frontend && npm run dev",
+    "blockchain": "cd blockchain && npx hardhat node",
+    "deploy": "cd blockchain && npx hardhat run scripts/deploy.js --network localhost",
+    "setup": "npm run setup:blockchain && npm run setup:frontend",
+    "setup:blockchain": "cd blockchain && npm install",
+    "setup:frontend": "cd frontend && npm install"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "django",
+    "react",
+    "voting"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
